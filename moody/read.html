@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reading MOODY Project</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="read.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="box">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/02/23/23/43/quote-2093519__340.jpg"
+          index="0"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/01/19/13/27/motivation-1992299__340.jpg"
+          index="1"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/09/15/18/bird-979478__340.jpg"
+          index="2"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://media.istockphoto.com/photos/inspiration-motivation-quote-if-you-get-tired-learn-to-rest-picture-id636426958?b=1&k=6&m=636426958&s=170667a&w=0&h=1c7HIiS2Wtk7mlAh5xfCzTMBZvWAC4Is99N1HLXj4RA="
+          index="3"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://media.istockphoto.com/photos/wood-frame-with-wisdom-quote-on-wood-background-picture-id1002989316?b=1&k=6&m=1002989316&s=170667a&w=0&h=O09bplbfoks4Nrp3exsb_lQPdmcWrUBJDEwg_i43KNU="
+          index="4"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://media.istockphoto.com/photos/inspiration-quote-decoration-picture-id1002006634?k=6&m=1002006634&s=612x612&w=0&h=O_060gEIoy-EQfnU4vcUJGVCJMPztqqjXYrkBdsItQE="
+          index="5"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://media.istockphoto.com/vectors/photo-booth-props-for-graduation-party-photobooth-vector-id1084048298?k=6&m=1084048298&s=612x612&w=0&h=eHhW3IWL4a6ri1sFud32yNQsWXPsJl-TiYP5zfMIKe0="
+          index="6"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://media.istockphoto.com/photos/if-you-want-to-say-something-say-it-here-picture-id862201618?k=6&m=862201618&s=612x612&w=0&h=fx9XPZ2vtHGONYrXTsPjyO5w1L7CnbYBSr9JJqBllrw="
+          index="7"
+        />
+      </div>
+    </div>
+    <script>
+      var boxes = document.getElementsByClassName("box");
+
+      for (var i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener("mouseover", function (event) {
+          var src = event.target.getAttribute("src");
+          var index = event.target.getAttribute("index");
+
+          for (var j = 0; j < boxes.length; j++) {
+            if (j == index) continue;
+            boxes[j].style.opacity = "0";
+          }
+          document.body.style.background = "url(" + src + ") center no-repeat";
+          document.body.style.backgroundSize = "cover";
+        });
+
+        boxes[i].addEventListener("mouseleave", function (event) {
+          for (var j = 0; j < boxes.length; j++) {
+            boxes[j].style.opacity = "1";
+          }
+          document.body.style.background = "rgba(0,0,0,0.9)";
+        });
+      }
+    </script>
+  </body>
+</html>

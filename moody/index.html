@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishvi's MOODY Project</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section>
+      <!-- <marquee direction="right"><img src=""width="15%"/></marquee> -->
+      <span class="header">
+        <h1><span>D</span>octor <span>M</span>oody</h1>
+      </span>
+
+      <div class="wrapper">
+        <div class="static-txt"><p>How do you feel?</p></div>
+        <ul class="dynamic-txts">
+          <img src="img/1ujS.gif" />
+        </ul>
+      </div>
+    </section>
+
+    <div class="col">
+      <div class="card card1">
+        <a href=""></a>
+      </div>
+
+      <div class="card card2">
+        <a href=""></a>
+      </div>
+
+      <div class="card card3">
+        <a href=""></a>
+      </div>
+
+      <div class="card card4">
+        <a href="ahappy.html"> Tap</a>
+      </div>
+    </div>
+
+    <div class="popup center">
+      <div class="icon">
+        <i class="fa fa-check"></i>
+      </div>
+      <div class="title">Welcome!!</div>
+      <div class="description">Choose your current mood.</div>
+      <div class="dismiss-btn">
+        <button id="dismiss-popup-btn">Dismiss</button>
+      </div>
+    </div>
+    <div class="center">
+      <button id="open-popup-btn">Click me</button>
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("open-popup-btn")
+      .addEventListener("click", function () {
+        document.getElementsByClassName("popup")[0].classList.add("active");
+      });
+
+    document
+      .getElementById("dismiss-popup-btn")
+      .addEventListener("click", function () {
+        document.getElementsByClassName("popup")[0].classList.remove("active");
+      });
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+    integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+</html>
